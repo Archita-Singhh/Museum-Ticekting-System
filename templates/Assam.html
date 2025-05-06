@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museums in Assam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .museum-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .museum-card {
+            display: flex;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .museum-image {
+            flex: 1;
+            max-width: 250px;
+            overflow: hidden;
+        }
+        .museum-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .museum-details {
+            flex: 2;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .museum-title {
+            font-size: 1.5em;
+            margin: 0;
+            color: #333;
+        }
+        .museum-description {
+            margin: 10px 0;
+            color: #555;
+        }
+        .museum-meta {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .action-button {
+            align-self: flex-start;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .action-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Museums in Assam</h1>
+    </div>
+    <div class="museum-container">
+        <div class="museum-card">
+            <div class="museum-image">
+                <img src=https://th.bing.com/th/id/OIP.cKw0i4l7J5BwC2FJyJwW8wHaFj?rs=1&pid=ImgDetMain> alt="Assam state museum,Guwahati">
+            </div>
+            <div class="museum-details">
+                <h2 class="museum-title">Assam state museum,Guwahati</h2>
+                <p class="museum-description">Located in Guwahati, this museum was established in 1940 and showcases artifacts of historical and cultural significance.</p>
+                <p class="museum-meta">City: Guwahati| Established: 1940</p>
+                <a href="state_museum_Guwahati.html" class="action-button">Learn More</a>
+
+            </div>
+        </div>
+        <div class="museum-card">
+            <div class="museum-image">
+                <img src=https://theshillongtimes.com/wp-content/uploads/2021/01/Assam-State-Museum-in-Guwahati.jpg> alt="Sivasagar Museum">
+            </div>
+            <div class="museum-details">
+                <h2 class="museum-title">Uttaran Museum</h2>
+                <p class="museum-description">Situated in Sivasagar, this museum was founded in 2003 and is renowned for its rare collection of sculptures, coins, and manuscripts.</p>
+                <p class="museum-meta">City: Sivasagar | Established: 2003</p>
+                <a href="Sivasagar_museum.html" class="action-button">Learn More</a>
+            </div>
+        </div>
+        <!-- Add more museum cards here -->
+    </div>
+</body>
+</html>

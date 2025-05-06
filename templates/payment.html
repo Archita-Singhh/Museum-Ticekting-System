@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options</title>
+    <link rel="stylesheet" href="Csssssss.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+
+<div class="container">
+    <!-- Recommended Payment Options -->
+    <div class="section">
+        <h3>Recommended Payment Options</h3>
+        <div class="option">
+            <a href="https://pay.google.com" target="_blank" style="text-decoration: none; color: inherit;">
+                <span>Google Pay</span>
+                <img src="https://logospng.org/download/google-pay/logo-google-pay-1024.png" alt="Google Pay Logo">
+            </a>
+        </div>
+    </div>
+
+    <!-- Online Payment Options -->
+    <div class="section">
+        <h3>Online Payment Options</h3>
+        <div class="option" onclick="toggleExpandable(this)">
+            <span>UPI (Pay via any App)</span>
+        </div>
+        <div class="expandable">
+            <div class="option">
+                <span>PhonePe</span>
+                <a href="https://pay.google.com" target="_blank" style="text-decoration: none; color: inherit;"></a>
+                <img src="https://image.pngaaa.com/590/95590-middle.png" alt="Google Pay Logo">
+            </div>
+            <div class="option">
+                <span>Paytm</span>
+                <img src="https://static.vecteezy.com/system/resources/previews/022/511/453/non_2x/paytm-logo-editorial-free-vector.jpg" alt="Google Pay Logo">
+            </div>
+        </div>
+        <div class="option" onclick="redirectToCreditCardPage()">
+            <span>Credit/Debit Card</span>
+    
+        </div>
+
+        <div class="expandable">
+            <p>Use your Visa, MasterCard, or Rupay cards for cashback offers!</p>
+        </div>
+        
+        <div class="option">
+            <span>Wallets</span>
+        </div>
+        
+        <div class="option">
+            <span>Net Banking</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleExpandable(element) {
+        const expandable = element.nextElementSibling;
+        if (expandable && expandable.classList.contains('expandable')) {
+            expandable.classList.toggle('active');
+        }
+    }
+</script>
+<script>
+    // Redirects to the Credit/Debit Card page
+    function redirectToCreditCardPage() {
+        window.location.href = "credit.html"; // Ensure credit.html exists in the same directory
+    }
+</script>
+
+</body>
+</html>

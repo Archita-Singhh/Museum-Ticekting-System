@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Ticket Booking</title>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="book-ticket.css">
+</head>
+<body>
+    <h1>Museum Ticket Booking</h1>
+    <form id="bookingForm">
+        <h2 style="color: green;"> State Museum, Lucknow </h2>
+         <!-- Primary User Information -->
+         <div id="primaryUserInfo">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Your Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        </div>
+    <label for="event">Select Event:</label>
+    <select id="event">
+        <option value="No-event">No Event</option>
+        <option value="Impressionist_Art-Showcase">Impressionist Art Showcase</option>
+        <option value="Ancient_Civilizations">Ancient Civilizations</option>
+        <option value="Modern_Art_Trends">Modern Art Trends</option>
+        <option value="Wildlife_Photography_Exhibition">Wildlife Photography Exhibition</option>
+    </select>
+
+    <div id="remainingTickets">
+        <p>Remaining Tickets: <span id="remainingCount">Loading...</span></p>
+    </div>
+
+    <label for="tickets">Number of tickets you want to book :</label>
+    <input type="number" id="tickets" min="1" required>
+
+    <div id="ticketDetails"></div>
+
+    <p>Total Price: ₹<span id="totalPrice">0</span></p>
+    <button id="bookButton" >Book Tickets</button>
+
+    <div id="result"></div>
+    <div id="paymentButtonContainer" style="display:none;">
+        <a href="payment.html" id="paymentButton" class="button">Proceed to Payment</a>
+    </div>
+    <script>
+        function submitBookingForm() {
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const phone = document.getElementById("phone").value;
+          const event = document.getElementById("event").value;
+          const tickets = document.getElementById("numTickets").value;
+      
+          // Prepare the data to be sent to the backend
+          const data = {
+            name: name,
+            email: email,
+            phone: phone,
+            event: event,
+            tickets: Array(Number(tickets)).fill("ticket") // Assuming each ticket is just a placeholder
+          };
+      
+          // Send the data using fetch
+          fetch('http://localhost:5000/book_ticket', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              alert("Booking successful! Your booking ID is: " + data.booking_id);
+            } else {
+              alert("Error: " + data.message);
+            }
+          })
+          .catch(error => {
+            alert("Something went wrong! Please try again.");
+          });
+        }
+      </script>
+      
+</form>
+</body>
+</html>

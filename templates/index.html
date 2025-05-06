@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum of Art and Culture</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <!-- Navbar -->
+   <nav class="navbar">
+    <div class="logo">
+        <i class="fas fa-landmark"></i> <!-- Font Awesome icon for Museum -->
+        <h1>Museum Booking</h1>
+    </div>
+    
+     <div class="nav-links">
+        <a href="index.html">Home</a> <!-- Home link to the main page -->
+        <a href="about.html">About the Museum</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="login.html">Login</a>
+        <a href="States.html" class="book-now-btn">Book Tickets</a>
+     </div>
+   </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <h1>Welcome to the Museum Booking</h1>
+        <p>Explore the rich heritage and vibrant museums of India, featuring diverse art forms and exhibitions from across the world.</p>
+
+        <!-- Museums Section -->
+        <section id="museums" class="museums-section">
+            <h2>Explore Our Featured Museums</h2>
+            <div class="museum-list">
+                <div class="museum-item">
+                    <a href="Allahabad_museum.html">
+                    <img src="https://www.tripnight.com/public/thumbs/monuments/3167/CxtP8GN9cOMX_326_363.jpg"  />
+                    <h3>Allahabad Museum, Uttar Pradesh</h3></a>
+                </div>
+                <div class="museum-item">
+                    <a href="National_museum.html">
+                    <img src="https://www.historyhit.com/app/uploads/fly-images/5153608/NMI-Delhi-1576x1074.jpg" />
+                    <h3>National Museum, New Delhi</h3></a>
+                </div>
+                <div class="museum-item">
+                    <a href="state_museum_lucknow.html">
+                    <img src="https://static.toiimg.com/photo/47958891/.jpg"  />
+                    <h3>Lucknow State Museum, Uttar Pradesh</h3></a>
+                </div>
+                <div class="museum-item">
+                    <a href="national_science.html">
+                    <img src="https://sos.noaa.gov/img/sos/showcase/National_Science_Centre_Delhi.jpg" />
+                    <h3>National Science Center , Delhi</h3></a>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- Upcoming Exhibitions Section -->
+    <section id="upcoming-exhibitions">
+        <h2>Upcoming Exhibitions</h2>
+        <div class="exhibition">
+            <img src="https://th.bing.com/th/id/OIP.HtLjJQHJ8o7YjPhTDfvMFgHaE6?rs=1&pid=ImgDetMain" alt="Impressionist Art">
+            <div class="exhibition-text">
+                <h3>Impressionist Art Showcase</h3>
+                <p><strong>Date:</strong> December 15, 2024</p>
+                <p><strong>Location:</strong> City Art Museum</p>
+                <p>Experience the beauty of classic Impressionist artworks from renowned artists like Monet and Renoir.</p>
+            </div>
+        </div>
+
+        <div class="exhibition">
+            <img src="https://th.bing.com/th/id/OIP.uVXpMFXCNHJDYsAbJCsmQAHaE4?rs=1&pid=ImgDetMain" alt="Ancient Civilizations">
+            <div class="exhibition-text">
+                <h3>Ancient Civilizations</h3>
+                <p><strong>Date:</strong> January 10, 2025</p>
+                <p><strong>Location:</strong> History Hall</p>
+                <p>Explore artifacts and relics that tell the stories of ancient cultures around the world.</p>
+            </div>
+        </div>
+
+        <div class="exhibition">
+            <img src="https://th.bing.com/th/id/R.28c44ea2238175c76665cf89a5f961bb?rik=2xvwulsfa94RwA&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f04%2fBest-Modern-Art-Paintings.jpg&ehk=9m3XgV6ulfGXvCU1OtNsDyPwUGtODZpOhkeI4%2f3eDpQ%3d&risl=&pid=ImgRaw&r=0" alt="Modern Art Trends">
+            <div class="exhibition-text">
+                <h3>Modern Art Trends</h3>
+                <p><strong>Date:</strong> February 5, 2025</p>
+                <p><strong>Location:</strong> Downtown Gallery</p>
+                <p>Discover the latest trends in modern art, including mixed media and abstract pieces.</p>
+            </div>
+        </div>
+
+        <div class="exhibition">
+            <img src="https://i1.wp.com/la-explorer.com/wp-content/uploads/wildlife4.jpg?fit=2048%2C1363&ssl=1" alt="Wildlife Photography">
+            <div class="exhibition-text">
+                <h3>Wildlife Photography Exhibition</h3>
+                <p><strong>Date:</strong> March 20, 2025</p>
+                <p><strong>Location:</strong> Nature Center</p>
+                <p>Immerse yourself in breathtaking wildlife photography from around the globe.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Book Tickets Section -->
+    <div class="book-tickets">
+        <h2>Book Your Tickets Now</h2>
+        <p>Don’t miss out on the upcoming events and exhibitions! Book your tickets today and enjoy the fascinating world of art and culture.</p>
+        <a href="States.html" class="book-now-btn">Book Tickets</a>
+    </div>
+
+    <!-- Chatbot Icon -->
+    <button id="chatbotIcon" onclick="openChat()" class="chatbot-icon">💬</button>
+
+    <!-- Chatbot Modal -->
+    <div id="chatbotModal" class="chatbot-modal">
+        <div class="chatbot-content">
+            <span onclick="closeChat()" class="close">&times;</span>
+            <h2>Chat with Us</h2>
+            <div id="chatbox"></div>
+            <input type="text" id="userInput" placeholder="Ask something..." onkeydown="if(event.key === 'Enter') sendMessage()">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Museum of Art and Culture | All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="chatbot.js"></script>
+    <script src="auth.js"></script> <!-- Authentication script for login/logout buttons -->
+</body>
+</html>

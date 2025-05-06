@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*height: 100vh;  Full screen height */
+  flex-direction: column;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #555;
+  font-size: 1rem;
+}
+
+input, select, button {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;  /* Take full width of the form */
+  max-width: 400px; /* Limit the form to 400px wide */
+}
+
+select, input[type="number"] {
+  width: 100%;
+  max-width: 400px;
+}
+
+input:focus, select:focus, button:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 0;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 450px; /* Keeps the form centered */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card effect */
+  border-radius: 8px;
+}
+
+#remainingTickets, #ticketDetails, #totalPrice {
+  text-align: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#result, #error {
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+#ticketDetails {
+  margin-top: 20px;
+}
+
+#result {
+  color: #007b00;
+}
+
+#error {
+  color: red;
+}
+
+#remainingTickets {
+  font-size: 1rem;
+}
+
+#totalPrice {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  label, input, select, button {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 10px 0;
+  }
+
+  form {
+    padding: 15px;
+  }
+}
+/* Button for Proceed to Payment */
+#paymentButtonContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#paymentButton {
+  padding: 10px 20px;
+  background-color: #28a745; /* Green color */
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+#paymentButton:hover {
+  background-color: #218838;
+}

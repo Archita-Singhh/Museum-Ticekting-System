@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museums in delhi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .museum-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .museum-card {
+            display: flex;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .museum-image {
+            flex: 1;
+            max-width: 250px;
+            overflow: hidden;
+        }
+        .museum-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .museum-details {
+            flex: 2;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .museum-title {
+            font-size: 1.5em;
+            margin: 0;
+            color: #333;
+        }
+        .museum-description {
+            margin: 10px 0;
+            color: #555;
+        }
+        .museum-meta {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .action-button {
+            align-self: flex-start;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .action-button:hover {
+            background-color: #0056b3;
+        }
+         /* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar .logo h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 0 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #555;
+}
+
+.navbar .logo i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo"></div>
+        <div class="nav-links">
+            
+            <a href="index.html">Home</a> <!-- Home link to the main page -->
+            <a href="about.html">About the Museum</a>
+            
+            <a href="gallery.html">Gallery</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="login.html">Login</a>
+            
+        </div>
+    </nav>
+    <div class="header">
+        <h1>Museums in delhi</h1>
+    </div>
+    <div class="museum-container">
+        <div class="museum-card">
+            <div class="museum-image">
+                <img src=https://tse1.mm.bing.net/th?id=OIP.yRbG7XRe8M7dYKiuvtFBhgHaDt&pid=Api&P=0&h=180 ="National Museum,New delhi">
+            </div>
+            <div class="museum-details">
+                <h2 class="museum-title">National Museum,New delhi</h2>
+                <p class="museum-description">Located in Janpath Rd,New DElhi, this museum was established in 15 August 1949 and showcases artifacts of historical and cultural significance.</p>
+                <p class="museum-meta">City:New Delhi| Established:15 August 1949 </p>
+                <a href="National_museum.html" class="action-button">Learn More</a>
+
+            </div>
+        </div>
+        <div class="museum-card">
+            <div class="museum-image">
+                <img src=https://tse4.mm.bing.net/th?id=OIP.PbX1H1ywVqdi7GpI1ktOJAHaEF&pid=Api&P=0&h=180> 
+            </div>
+            <div class="museum-details">
+                <h2 class="museum-title">National Science Centre,New delhi</h2>
+                <p class="museum-description">Situated in pragati maidan New Delhi, this museum was founded in 1992 </p>
+                <p class="museum-meta">City: New Delhi| Established: 1992</p>
+                <a href="national_science.html" class="action-button">Learn More</a>
+            </div>
+        </div>
+        <!-- Add more museum cards here -->
+    </div>
+</body>
+</html>

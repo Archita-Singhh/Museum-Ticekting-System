@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Museum Events in India</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Heading for the events section */
+        h1 {
+            text-align: center;
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+
+        /* Container to hold events */
+        .events-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Individual event card */
+        .event-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .event-card h2 {
+            color: #00796b;
+            font-size: 1.8rem;
+        }
+
+        .event-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .event-card .date {
+            font-weight: bold;
+            color: #d32f2f;
+        }
+
+        .event-card .location {
+            font-style: italic;
+            color: #616161;
+        }
+
+        /* Button to see more details */
+        .event-card a {
+            text-decoration: none;
+            color: white;
+            background-color: #00796b;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-align: center;
+            width: fit-content;
+            align-self: flex-start;
+            transition: background-color 0.3s;
+        }
+
+        .event-card a:hover {
+            background-color: #004d40;
+        }
+
+        /* Responsive layout for small screens */
+        @media (max-width: 768px) {
+            .events-container {
+                padding: 10px;
+            }
+
+            .event-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Upcoming Museum Events in India</h1>
+    <div class="events-container">
+        <!-- Event 1 -->
+        <div class="event-card">
+            <h2>The Art of Ancient India</h2>
+            <p class="date">January 10 - 15, 2025</p>
+            <p class="location">National Museum, New Delhi</p>
+            <p>Explore the fascinating history and art of Ancient India, showcasing a collection of sculptures, paintings, and artifacts from the Vedic period to the Gupta Empire.</p>
+            <a href="https://www.nationalmuseumindia.gov.in" target="_blank">Learn More</a>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-card">
+            <h2>Rajasthan Folk Art Exhibition</h2>
+            <p class="date">February 20 - 28, 2025</p>
+            <p class="location">Albert Hall Museum, Jaipur</p>
+            <p>Experience the vibrant and colorful folk art of Rajasthan, with live performances, handicrafts, and more.</p>
+            <a href="http://www.alberthallmuseum.org" target="_blank">Learn More</a>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event-card">
+            <h2>Indus Valley Civilization: A Journey Back in Time</h2>
+            <p class="date">March 5 - 15, 2025</p>
+            <p class="location">Archaeological Museum, Harappa</p>
+            <p>Discover the mysteries of the Indus Valley Civilization through rare artifacts, pottery, and an in-depth look at urban planning of one of the world’s earliest civilizations.</p>
+            <a href="http://www.harappan-museum.com" target="_blank">Learn More</a>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="event-card">
+            <h2>Modern Indian Art Showcase</h2>
+            <p class="date">April 12 - 20, 2025</p>
+            <p class="location">Jehangir Art Gallery, Mumbai</p>
+            <p>View stunning contemporary artwork by Indian artists, featuring various media such as painting, photography, and sculpture.</p>
+            <a href="https://www.jahengirartgallery.com" target="_blank">Learn More</a>
+        </div>
+
+        <!-- Event 5 -->
+        <div class="event-card">
+            <h2>Heritage of South India: Temples and Monuments</h2>
+            <p class="date">May 1 - 10, 2025</p>
+            <p class="location">Chennai Museum, Chennai</p>
+            <p>Step into the world of South India's rich architectural heritage, with an exhibition focusing on ancient temples, sculptures, and inscriptions.</p>
+            <a href="http://www.chennaitemplesmuseum.com" target="_blank">Learn More</a>
+        </div>
+    </div>
+</body>
+</html>

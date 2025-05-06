@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Letter</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container for the moving letter */
+        .moving-letter-container {
+            position: relative;
+            width: 100%;
+            height: 100px; /* Adjust based on letter size */
+            overflow: hidden; /* Hide the letter when it moves outside the container */
+        }
+
+        /* The moving letter */
+        .moving-letter {
+            font-size: 5rem; /* Size of the letter */
+            font-weight: bold;
+            position: absolute;
+            color: red; /* Set letter color to red */
+            animation: moveLetter 20s linear infinite; /* Animation to move the letter */
+            cursor: pointer; /* Change cursor to pointer to indicate clickability */
+        }
+
+        /* Keyframes for moving the letter */
+        @keyframes moveLetter {
+            0% {
+                left: -10%; /* Start from the left off-screen */
+            }
+            100% {
+                left: 100%; /* End at the right off-screen */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="moving-letter-container">
+        <!-- Anchor tag wrapping the letter to make it clickable -->
+        <a href="Upcoming_events.html" target="_blank">
+            <div class="moving-letter">Upcoming Events</div>
+        </a>
+    </div>
+</body>
+</html>

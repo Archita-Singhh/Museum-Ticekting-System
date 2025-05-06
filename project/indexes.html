@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Ticket Booking</title>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="book-ticket.css">
+</head>
+<body>
+    <h1>Museum Ticket Booking</h1>
+    
+    <label for="event">Select Event:</label>
+    <select id="event">
+        <option value="art_exhibition">Art Exhibition</option>
+    </select>
+
+    <div id="remainingTickets">
+        <p>Remaining Tickets: <span id="remainingCount">Loading...</span></p>
+    </div>
+
+    <label for="tickets">Number of Tickets:</label>
+    <input type="number" id="tickets" min="1" required>
+
+    <div id="ticketDetails"></div>
+
+    <p>Total Price: $<span id="totalPrice">0</span></p>
+    <button id="bookButton" >Book Tickets</button>
+
+    <div id="result"></div>
+</body>
+</html>
